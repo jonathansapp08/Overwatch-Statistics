@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Overwatch Statistics</title>
+        <link rel="stylesheet" href="{{ url_for('static',     filename='css/template.css') }}">
+        <link rel="shortcut icon" type="image/png" href="/static/img/ow-favicon.ico"/>
+        </head>
+        <header>
+            <h1 class="title"></h1>
+            <div class="container">
+                <strong><nav>
+                    <ul class="menu"> 
+                        <li><a href="{{ url_for('home') }}"><img src="static/img/overwatch-logo.png" alt="Overwatch Logo" height="25" width="25"></a></li>
+                        <li class="about"><a href="{{ url_for('about') }}">About</a></li>
+                        <li class="upload"><a href="{{ url_for('upload_file') }}">Upload</a></li>
+                    </ul>
+                </nav></strong>
+            </div>
+    </header>
+   <body>
+    <h1>Upload</h1>
+    <p>The goal of this application is to see what heroes and maps you play best on!</p>
+    <p>In order for this to work, please upload a csv file in the following format</p>
+    <img src="/static/img/example.png" alt="Example CSV" width="100%" height="50%">
+
+    <div class="form">
+      <form action = "http://localhost:5000/results" method = "POST" 
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+      </form>
+    </div>
+
+   </body>
+</html>

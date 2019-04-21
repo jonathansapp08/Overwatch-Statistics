@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <title>Overwatch Statistics</title>
+   <link rel="stylesheet" href="{{ url_for('static',     filename='css/template.css') }}">
+   <link rel="shortcut icon" type="image/png" href="/static/img/ow-favicon.ico"/>
+ </head>
+ <header>
+    <div class="container">
+      <strong><nav>
+        <ul class="menu"> 
+          <li><a href="{{ url_for('home') }}"><img src="static/img/overwatch-logo.png" alt="Overwatch Logo" height="25" width="25"></a></li>
+          <li class="about"><a href="{{ url_for('about') }}">About</a></li>
+          <li class="upload"><a href="{{ url_for('upload_file') }}">Upload</a></li>
+        </ul>
+      </nav></strong>
+    </div>
+  </header>
+ <body>    
+
+    <video muted loop autoplay id="intro">
+        <source src="../static/video/ow_intro.mp4" type="video/mp4">
+    </video>
+
+  <!-- Optional: some overlay text to describe the video -->
+  <div class="content">
+      <h1>Overwatch Statistics</h1>
+      <div class="btn-group">
+          <input type="button" onclick="location.href='/upload';" value='Get Started' />
+      </div>
+
+  </div> 
+  </body>
+</html>
+
