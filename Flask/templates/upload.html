@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <title>Overwatch Statistics</title>
         <link rel="stylesheet" href="{{ url_for('static',     filename='css/template.css') }}">
@@ -19,18 +20,21 @@
             </div>
     </header>
    <body>
-    <h1>Upload</h1>
-    <p>The goal of this application is to see what heroes and maps you play best on!</p>
-    <p>In order for this to work, please upload a csv file in the following format</p>
+    <p class="upload-instruction">Please upload a csv file in the following format</p>
     <img src="/static/img/example.png" alt="Example CSV" width="100%" height="50%">
 
-    <div class="form">
-      <form action = "http://localhost:5000/results" method = "POST" 
-         enctype = "multipart/form-data">
-         <input type = "file" name = "file" />
-         <input type = "submit"/>
+    <div class="upload">
+      <form action="/results" method = "POST" enctype = "multipart/form-data">
+        <label for="file" class="form">Choose a file</label>
+        <input type="file" name="file" id="file" onchange="this.form.submit()"/>
+        <p></p> 
       </form>
     </div>
 
    </body>
 </html>
+
+
+
+   <!-- <input type="file" name="file" onchange="this.form.submit()" class="form"> -->
+            

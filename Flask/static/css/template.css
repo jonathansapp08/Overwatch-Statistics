@@ -1,82 +1,147 @@
-body {
-    background-color: #4A4C4E;
-  }
-
-body {
-    font-family: 'Overwatch';
-    font-size: 30px
+@font-face {
+  font-family: 'Overwatch'; 
+  src: url('../fonts/big_noodle_titling.ttf'); 
 }
 
-@font-face {
-    font-family: 'Overwatch'; 
-    src: url('../fonts/big_noodle_titling.ttf'); 
+
+/* Navbar */
+menu {
+  position: relative;
+  margin: 0 auto;
+  width: 100%
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+li {
+float: left;
+}
+li a {
+display: block;
+color: #FA9C1D;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-family: 'Overwatch';
+font-style: italic;
+font-size: 30px;
+}
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+background-color: #FFFFFF;
+}
+
+
+/* HOME.HTML */
+/* Div for video and text */
+.container {
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+}
+#intro-clip {
+  min-width: 100%; 
+  min-height: 100%; 
+  width: auto;
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .container > #intro-clip {
+    top: 50%;
+    left: 50%;
+		transform: translate(-40%, -10%);
+  }
+}
+
+
+.title{
+  position: absolute;
+  text-align: center;
+   top: 15%;
+  font-size: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.instruction{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f99e1a;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+
+/* ABOUT.HTML  */
+.about-intro{
+  font-size: 50px;
+}
+.explanation{
+  font-size: 40px;
+}
+
+
+/* Upload File Form */
+.upload-instruction{
+  font-size: 50px;
+}
+.form {
+  background-color: #f99e1a;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-family: 'Overwatch';
+  font-style: italic;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: absolute;
+  left: 42%;
+}
+@media only screen and (max-width: 768px) {
+  .form{
+    left: 32%;
+  }
+}
+input[type="file"] {
+  display: none;
+}
+
+
+
+
+
+
+body {
+    background-color: #4A4C4E;
+    font-family: 'Overwatch';
+  }
+
+p {
+  text-align: center;
+  color: #FFFFFF;
 }
 
 h1 {
-    margin:0px;
-    color: #FFFFFF
-}
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #FFFFFF;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: #FA9C1D;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: 'Overwatch';
-    font-style: italic;
-    font-size: 25px
-  }
-  
-  /* Change the link color to #111 (black) on hover */
-  li a:hover {
-    background-color: #FFFFFF;
-  }
-
-  p {
-    text-align: center;
-    color: #FFFFFF
-  }
-
- 
-  #intro {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .content {
-    position: absolute;
-    bottom: 0;
-    color: #f1f1f1;
-    width: 100%;
-    padding-bottom: 35%;
-    text-align: center;
-    font-style: italic
-  }
-
-  .btn-group {
-      margin: auto;
-      width: 50%;
-      padding: 10px;
-  }
-
-  .form {
-    margin: auto;
-    width: 100%;
-    padding: 50px;
     color: #FFFFFF;
-  }
-  
-  
+}
