@@ -71,7 +71,7 @@ background-color: #FFFFFF;
 }
 .instruction{
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #f99e1a;
